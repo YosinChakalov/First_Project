@@ -35,7 +35,7 @@ const optovic = () => {
 
 
   return (
-    <section>
+    <section className='2xl:w-[100%] xl:w-[100%] lg:w-[100%]  md:w-[100%] sm:w-[100%] st:w-[100%]'>
       <div>
       <Swiper
         spaceBetween={30}
@@ -72,17 +72,17 @@ const optovic = () => {
         <Card_1 img={medal} text={t("main.optovic.text_4")} button={t('main.optovic.button')} />
         </div>
       </div>
-      <div className='bg-[white] dark:bg-[#333] dark:text-[#eeeeee]'>
+      <div className='bg-[white]  dark:bg-[#333] dark:text-[#eeeeee]'>
         <h1 className='text-[25px] font-[500] text-center py-[20px]'>{t('main.optovic.title_2')}</h1>
-        <div className='flex justify-between py-[40px] w-[90%] m-auto '>
+        <div className='flex justify-between py-[40px] w-[90%] m-auto 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap '>
           <Card_4 img={kurka} title={t('main.optovic.card.name_1')} desc={t('main.optovic.card.text_1')} />
           <Card_4 img={kurka} title={t('main.optovic.card.name_2')} desc={t('main.optovic.card.text_2')} />
           <Card_4 img={kurka} title={t('main.optovic.card.name_3')} desc={t('main.optovic.card.text_3')} />
           <Card_4 img={kurka} title={t('main.optovic.card.name_4')} desc={t('main.optovic.card.text_4')} />
         </div>
       </div>
-      <div className='bg-[white] dark:bg-[#333] dark:text-[#eeeeee]'>
-        <div className='flex justify-between items-center w-[90%] m-auto'>
+      <div className='bg-[white] 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap dark:bg-[#333] dark:text-[#eeeeee]'>
+        <div className='flex justify-between items-center 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap w-[90%] m-auto mb-[40px]'>
         <div className='pr-[150px]'>
           <h1 className='text-[25px] mb-[20px] font-[600]'>{t('main.optovic.certificat')}</h1>
           <p className='text-[18px]'>{t('main.optovic.text_cert')}</p>
@@ -91,22 +91,22 @@ const optovic = () => {
           <img src={cert} alt="" />
         </div>
         </div>
-        <div className='flex justify-between items-center w-[90%] m-auto'>
+        <div className='flex justify-between 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap items-center w-[90%] m-auto'>
         <div className='w-[50%] flex items-center justify-center bg-[#dedede] p-[20px]'>
           <img src={images} alt="" />
         </div>
-        <div className='pl-[80px]'>
+        <div className=''>
           <h1 className='text-[25px] mb-[20px] font-[600]'>{t('main.optovic.fast_ogruz')}</h1>
           <p className='text-[18px]'>{t('main.optovic.text_fast_ogruz')}</p>
         </div>
         </div>
       </div>
-      <div className='bg-[white] dark:bg-[#333] dark:text-[#eeeeee] py-[50px] text-center'>
+      <div className='bg-[white]  dark:bg-[#333] dark:text-[#eeeeee] py-[50px] text-center'>
         <div>
         <h1 className='text-[25px] font-[600] text-center py-[30px]'>{t("main.optovic.title_3")}</h1>
         <p className='text-[19px] font-[400] text-center pb-[7px]'>{t("main.optovic.text_5")}</p>
         <p className='text-[19px] font-[400] text-center pb-[30px]'>{t("main.optovic.text_6")}</p>
-        <div className='flex w-[90%] m-auto justify-between my-[40px]'>
+        <div className='flex w-[90%] m-auto justify-between 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap my-[40px]'>
           <Card_5 name={t('main.optovic.opt_name_1')} price={t('main.optovic.opt_price_1')} />
           <Card_5 name={t('main.optovic.opt_name_2')} price={t('main.optovic.opt_price_2')} />
           <Card_5 name={t('main.optovic.opt_name_3')} price={t('main.optovic.opt_price_3')} />
@@ -117,7 +117,7 @@ const optovic = () => {
       <div className='bg-[white] dark:bg-[#333] dark:text-[#eeeeee]'>
         <div >
           <h1 className='text-center text-[28px] font-[600] py-[50px]'>{t('main.optovic.title_4')}</h1>
-          <div className='w-[90%] m-auto flex justify-between items-center'>
+          <div className='w-[90%] m-auto flex justify-between items-center flex-wrap 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap'>
             <div className='flex flex-wrap w-[62%] gap-10 justify-center text-center'>
               <form action="">
                 <TextField id="outlined-basic" label={t('main.optovic.inp_1')} variant="outlined" size='medium' style={{width: 400, margin: 10, backgroundColor: "white"}} />
@@ -146,7 +146,7 @@ const optovic = () => {
       </div>
       <div className="bg-[white] dark:bg-[#333] dark:text-[#eeeeee] py-[100px]">
         <h1 className='text-[28px] text-center font-[600]'>{t("main.optovic.title_5")}</h1>
-        <div className='w-[90%] m-auto flex justify-between pt-[50px]'>
+        <div className='w-[90%] m-auto flex justify-between pt-[50px] 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap'>
           <Card_6 img={quotes} text={t('main.optovic.text_7')} />
           <Card_6 img={quotes} text={t('main.optovic.text_8')} />
           <Card_6 img={quotes} text={t('main.optovic.text_9')} />

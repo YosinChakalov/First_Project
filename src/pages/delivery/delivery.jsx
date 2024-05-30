@@ -9,7 +9,7 @@ const delivery = () => {
 
   return (
     <section className="bg-[white] pt-[10px] dark:bg-[#333] dark:text-[#eeeeee]">
-      <div className="flex gap-3 font-[400] text-[20px] text-[#808080] w-[90%] m-auto">
+      <div className="flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto">
         <h1>{t("main.delivery.path_1")}</h1>
         <h1>/</h1>
         <h1>{t("main.delivery.path_2")}</h1>

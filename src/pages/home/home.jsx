@@ -31,9 +31,7 @@ const home = () => {
   }
 
   const { data, error, isLoading } = useGetTodosQuery();
-  const { data2, error2, isLoading2 } = useGetReviewsQuery()
-
-  console.log(data, data2);
+  const { data:data2, error:error2, isLoading:isLoading2 } = useGetReviewsQuery()
 
   return (
     <section>
@@ -119,8 +117,16 @@ const home = () => {
         </div>
         </div>
       </div>
-      <div className="bg-[white] pt-[100px] dark:bg-[#333] dark:text-[#eeeeee]">
-        
+      <div className=" bg-[white] pt-[100px] dark:bg-[#333] dark:text-[#eeeeee]">
+        <div className="flex justify-between w-[90%] m-auto ">
+        {data2?.map((el)=> {
+          return (
+            <div key={el.id}>
+              <img src={el.img} alt="" className="w-[300px]" />
+            </div>
+          )
+        })}
+        </div>
       </div>
     </section>
   );

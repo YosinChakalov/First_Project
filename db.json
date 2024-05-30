@@ -119,68 +119,50 @@
             "img": "/src/assets/images/sock.jpg",
             "name": "Носки из хлопка с ослабленной резинкой",
             "price": "390 ₽"
+        },
+        {
+            "id": "11",
+            "img": "/src/assets/images/sock.jpg",
+            "name": "Носки из хлопка с ослабленной резинкой",
+            "price": "390 ₽"
+        },
+        {
+            "id": "12",
+            "img": "/src/assets/images/sock.jpg",
+            "name": "Носки из хлопка с ослабленной резинкой",
+            "price": "390 ₽"
         }
     ],
     "kids": [
         {
             "id": "1",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
+            "img": "/src/assets/images/kids_sock.jpg",
+            "name": "Носки из верблюжьей шерсти детские",
+            "price": "310 ₽"
         },
         {
             "id": "2",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
+            "img": "/src/assets/images/kids_sock_2.jpg",
+            "name": "Носки из шерсти яка детские",
+            "price": "450 ₽"
         },
         {
             "id": "3",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
+            "img": "/src/assets/images/kids_sock_3.jpg",
+            "name": "Носки из верблюжьей шерсти детские",
+            "price": "370 ₽"
         },
         {
             "id": "4",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
+            "img": "/src/assets/images/kids_laggins_1.jpg",
+            "name": "Леггинсы из овечьей шерсти детские",
+            "price": "880 ₽"
         },
         {
             "id": "5",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
-        },
-        {
-            "id": "6",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
-        },
-        {
-            "id": "7",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
-        },
-        {
-            "id": "8",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
-        },
-        {
-            "id": "9",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
-        },
-        {
-            "id": "10",
-            "img": "/src/assets/images/sock.jpg",
-            "name": "Носки из хлопка с ослабленной резинкой",
-            "price": "390 ₽"
+            "img": "/src/assets/images/kids_leggins_2.jpg",
+            "name": "Леггинсы из шерсти мериноса детские",
+            "price": "1 625 ₽"
         }
     ]
 }
