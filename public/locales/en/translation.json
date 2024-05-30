@@ -1,0 +1,171 @@
+{
+    "header": {
+        "nav": {
+            "top": {
+                "top_text": "Subscribe to our social networks VKontakte @DoCtortm_Shop telegram @doCtortMbrand",
+                "navigations": {
+                    "about_us": "About Us",
+                    "delivery_and_payment": "Shipping and payment",
+                    "blog": "Blog",
+                    "optovicam": "Wholesalers",
+                    "login": "Log in",
+                    "register": "Registration"
+                }
+            },
+            "categories": {
+                "man": "Men",
+                "childs": "Children",
+                "for_home": "FOR HOME",
+                "for_beauty": "For beauty and health",
+                "discounts": "ACTIONS",
+                "likvidation": "Liquidation",
+                "search": "Search for goods"
+            }
+        }
+    },
+    "main": {
+        "home": {
+            "card_1_text": "More than 15 years in the market",
+            "title_1": "Hits",
+            "title_2": "New items",
+            "card_2_button": "Read more",
+            "card_3": {
+                "title": "Popular categories",
+                "name_1": "Vests",
+                "name_2": "Jumper",
+                "name_3": "MEN'S SHIRTS",
+                "name_4": "SLIPPERS"
+            },
+            "card_4": {
+                "title_1": "3 of the year",
+                "text_1": "In this domain",
+                "title_2": "100%",
+                "text_2": "Quality of goods",
+                "title_3": "66%",
+                "text_3": "Regular customers",
+                "title_4": "90%",
+                "text_4": "We are ready to recommend us"
+            }
+        },
+        "about_us": {
+            "path_1": "home",
+            "path_2": "About Us",
+            "title": "ABOUT US",
+            "text_1": "You are welcomed by LLC 'Company Doctor' Company.We have been successfully working in the Russian market since 2006 and have established ourselves as a worthy manufacturer and seller. ",
+            "text_2": "In our assortment, you can find quality products made of natural materials - wool (camel, dog, sheep and yak wool) produced in Russia.Our goods are certified and medical devices have registration certificates.Each of our products is packed in proprietary packaging, which allows fakes to exclude.",
+            "text_3": "In addition to medical-preventive, medical products, thermal underwear, homemade clothes and shoes made of natural wool, now we are actively expanding the line of classic clothing for men and women from natural high-quality materials!In our classic assortment: jumper, sweaters, poncho, as well as some outerwear - jackets, shirts -jackets.We try to follow trends and satisfy the taste of a buyer of any age!",
+            "text_4": "Our grateful buyers are also lovers of high -quality natural clothes, outdoor activities (fishing, campaigns), summer residents and summer residents and everyone who appreciates the gifts of nature in everyday things.People Plussize are our regular customers.We also get a lot of reviews from people whose work is related to being on the street and who lives in the cold regions of our country.",
+            "text_5": "With our products made of natural wool - comfort will be provided at 100%!",
+            "text_6": "Also, LLC 'Center Doctor' also works with wholesale customers.  We offer a wide range of products of a wide size row, an understandable system of discounts, a warehouse in Moscow and a quick shipment."
+        },
+        "delivery": {
+            "path_1": "home",
+            "path_2": "Shipping and payment",
+            "title": "Shipping and payment",
+            "text_1": "We thank you for the choice of our online store of the company Center Doctor LLC - a manufacturer of high -quality goods and clothes made of natural materials - wool (camel, dog, sheep and yak wool) produced in Russia.",
+            "text_2": "Getting the goods directly from the manufacturer is the best guarantee of the quality and authenticity of the product.We will be happy to deliver the selected product at a convenient time for you.",
+            "sub-title": "1. Delivery in Moscow",
+            "text_3": "We provide delivery of the choice from our own courier and 3 transport companies: Russian Post, SDEK, Boxberry.",
+            "text_4": "Delivery of goods when choosing the method of delivery by the Courier of the online store is carried out within the Moscow Ring Road from 10-00 to 18-00 from Monday to Friday.",
+            "text_5": "The delivery date is agreed with the manager of the online store.",
+            "text_6": "Наши курьеры привезут Вам на выбор до 5-ти единиц товара.",
+            "text_7": "The cost of delivery is 350 rubles.",
+            "text_8": "Payment for goods when choosing a delivery method “Courier of an online store” can be made in different ways: payment by card or cash courier.",
+            "text_9": "You can also choose a delivery method “Delivery SDEK”, “Delivery Boxberry”, “Delivery of Russian Post”.",
+            "text_10": "The delivery time depends on the selected transport company, the delivery tariff at the time of placing the order.ng the order.",
+            "text_11": "The calculation of the exact cost of delivery of your order will be automatically made in the basket at the time of placing the order.",
+            "text_12": "When choosing the delivery methods “Delivery SDEK”, “Delivery Boxberry”, “Delivery of Russian Post” preparation of goods (cost of goods + transportation costs) is carried out.",
+            "sub-title_2": "2. Доставка в Москву за МКАД, Московскую область и регионы РФ",
+            "text_13": "Предоставляем доставку на выбор от 3 транспортных компаний: Почта России, СДЭК, Boxberry.",
+            "text_14": "The delivery time depends on the selected transport company, the delivery tariff at the time of placing the order.",
+            "text_15": "The calculation of the exact cost of delivery of your order will be automatically made in the basket at the time of placing the order.",
+            "text_16": "When choosing the delivery methods “Delivery SDEK”, “Delivery Boxberry”, “Delivery of Russian Post”, the prepayment of the goods (the cost of goods + transportation costs) is carried out.",
+            "announce": "ATTENTION:",
+            "text_17": "At the moment, we do not deliver goods with cash on delivery !!!Delivery by transport companies is carried out only with 100% prepayment (cost of goods + transportation costs) by bank transfer."
+        },
+        "discount": {
+            "path_1": "home",
+            "path_2": "Actions",
+            "title": "Actions",
+            "text_1": "Sale 40% discount!",
+            "text_2": "30% discounts on a selective assortment of clothing",
+            "text_3": "Liquidation up to 70%",
+            "text_4": "Exclusions",
+            "duration": "The promotion is valid from 05.02.2024 to 31.12.2024",
+            "button": "219 days left"
+        },
+        "return_items": {
+            "path_1": "home",
+            "path_2": "Purchase returns",
+            "title": "Purchase returns",
+            "text_1": "1) The buyer has the right to refuse the goods ordered and/or paid to him in the online store, at any time before it is received, and after receiving-within 14 days.If claims arise regarding the quality of the goods, present them within 10 calendar days from the date of receipt.",
+            "text_2": "2) The buyer is not entitled to abandon the paid and accepted goods of proper quality, which has individually defined properties.The seller has the right: not to accept claims on the returned product of the proper quality specified in the list of non -food goods of good quality, not subject to return or exchange approved by the Decree of the Government of the Russian Federation from 19.01.1998 № 55.",
+            "text_3": "3) When returning or exchanging goods of good quality, the buyer must comply with the following conditions: the goods must be clean, without traces of dust, without traces of operation, without damage, without loss of commodity, in the original packaging.",
+            "text_4": "4) In accordance with paragraph 2 of “The List of Penetest Products of the Proper quality, which are not subject to return or exchange for similar goods of other sizes, forms, dimensions, style, colors or configuration”, approved by Decree of the Government of the Russian Federation dated 01/19/1998 No. 55.",
+            "text_5": "5) If the seller was delivered by an order of inadequate quality, the buyer undertakes to refuse the goods at the time of delivery and inform the seller by calling +7 (916) 800-13-16 or the email address info@doCtor-tm.ru.",
+            "text_6": "6) For a return/exchange of goods, the buyer is obliged to agree with the store manager and send the return/exchanged product (order for return/exchange) by the method agreed with the manager: mailing or courier service or deliver otherwise at the following address: 127282, Russia, Moscow, Moscow, MoscowPolynaya St. 31g, p. 1, phone +7 (916) 800-13-16.Working hours: Mon-PN from 10 to 18.",
+            "text_7": "The order for a refund/exchange should be attached:",
+            "text_8": "- invoice for goods",
+            "text_9": "- commodity and cash receipt, or other documents confirming the purchase of goods.",
+            "text_10": "7) The buyer must provide the seller or in writing to the return of goods of inadequate quality at the address: 127282, Russia, Moscow, Polar D. D 31g, p. 1, or in electronic e-mail address info@doCtor-tm.ru.The requirement can be drawn up in free form with the mandatory indication of the customer’s contact details that coincide with the goods indicated when ordering the goods, the name of the returned goods and the reasons for the return.The buyer has the right to ask all questions to the seller by phone:+7 (916)800-13-16.",
+            "text_11": "8) In accordance with Art.22 of the Law of the Russian Federation No. 2300-I “On the Protection of Consumer Rights”, the amount paid by the buyer for goods of inadequate quality is subject to return to the buyer within 10 calendar days from the date of presentation of the relevant claim.The refund is carried out in cash with courier, which takes the goods in Moscow.In other cases, when the goods were paid by a bank card, the money fund is returned to the buyer's account within 5 business days."
+        },
+        "optovic": {
+            "title_1": "ADVANTAGES OF WORKING WITH US",
+            "text_1": "More than 200 current positions in stock",
+            "text_2": "Certificates with each delivery",
+            "text_3": "Fast shipment from the warehouse in Moscow",
+            "text_4": "Flexible conditions",
+            "button": "More details",
+            "title_2": "IN OUR ASSORTMENT, MORE THAN 200 CURRENT POSITIONS IN THE CATEGORIES:",
+            "card": {
+                "name_1": "MEN'S CLOTHING",
+                "text_1": "Jumpers, sweaters, shirts, jackets, trousers, t-shirts in a wide size range from 42 to 64",
+                "name_2": "THERMAL UNDERWEAR",
+                "text_2": "Tanks, t-shirts, long sleeves, long johns in a wide size range",
+                "name_3": "ACCESSORIES",
+                "text_3": "Tights, socks, hats, scarves, gloves, panamas",
+                "name_4": "HOUSEHOLD GOODS",
+                "text_4": "Blankets, throws, mattress covers, pillows, home slippers"
+            },
+            "certificat": "CERTIFICATES",
+            "text_cert": "We have registration certificates for medical products!",
+            "fast_ogruz": "FAST SHIPMENT",
+            "text_fast_ogruz": "Our warehouse is located in Moscow. We ship within 3 working days. We cooperate with various transport companies: Delovye Linii, Baikal, Kit, etc.",
+            "title_3": "3 PRICE LIST COLUMNS:",
+            "text_5": "The minimum order amount is 50,000 rubles. We work with different types of clients: Wholesalers/Fairs/Retail chains/Joint purchases"
+        }        
+    },
+    "footer": {
+        "first_colm": {
+            "title": "CONTACTS",
+            "location": "Moscow" 
+        },
+        "second_colm": {
+            "title": "Catalog",
+            "man": "Men",
+            "childrens": "Children",
+            "forHome": "For home",
+            "fotBeauty": "For beauty and health",
+            "discounts": "Actions",
+            "likvidation": "Liquidation"
+        },
+        "third_colm": {
+            "title": "Information",
+            "about": "About Us",
+            "delivery": "Shipping and payment",
+            "return": "Return",
+            "optovic": "Wholesale customers",
+            "policity": "Politics about personal data",
+            "Reviews": "Reviews"
+        },
+        "fourth_colm": {
+            "title": "NEWSLETTER",
+            "policity":"Privacy Policy",
+            "email": "Enter e-mail"
+        },
+        "last": {
+            "company": "©Online storeDoctorTM"
+        }
+    }
+}
