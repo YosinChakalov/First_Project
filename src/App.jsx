@@ -17,6 +17,7 @@ import {
   Man,
   Optovic,
   Policity,
+  Register,
   Return_items,
   Reviews,
 } from "./routes/router";
@@ -60,6 +61,14 @@ function App() {
           element: (
             <Suspense fallback={<div className="loader"></div>}>
               <Login />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/register",
+          element: (
+            <Suspense fallback={<div className="loader"></div>}>
+              <Register />
             </Suspense>
           ),
         },
