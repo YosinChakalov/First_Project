@@ -206,10 +206,10 @@ const layout = () => {
         <div className="flex justify-center gap-10 items-center mt-[10px]">
           <Switcher />
           <IconButton aria-label="">
-            <StarOutline style={{ color: "black", }} />
+            <StarOutline style={{ color: "black" }} />
           </IconButton>
           <IconButton aria-label="">
-            <ShoppingBagOutlined style={{ color: "black", }} />
+            <ShoppingBagOutlined style={{ color: "black" }} />
           </IconButton>
         </div>
       </List>
@@ -268,7 +268,9 @@ const layout = () => {
                 </div>
                 <div className="flex gap-3 ">
                   <h1 className="hover:text-[gray] transition-colors cursor-pointer text-wrap ">
-                    {t("header.nav.top.navigations.login")}
+                    <Link to={"/login"}>
+                      {t("header.nav.top.navigations.login")}
+                    </Link>
                   </h1>
                   <div className="border border-[#999] mx-[10px]"></div>
                   <h1 className="hover:text-[gray] transition-colors cursor-pointer">

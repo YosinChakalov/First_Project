@@ -24,14 +24,6 @@ import {
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/login",
-      element: (
-        <Suspense fallback={<div className="loader"></div>}>
-          <Login />
-        </Suspense>
-      ),
-    },
-    {
       path: "/",
       element: (
         <Suspense fallback={<div className="loader"></div>}>
@@ -60,6 +52,14 @@ function App() {
           element: (
             <Suspense fallback={<div className="loader"></div>}>
               <Man />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/login",
+          element: (
+            <Suspense fallback={<div className="loader"></div>}>
+              <Login />
             </Suspense>
           ),
         },
