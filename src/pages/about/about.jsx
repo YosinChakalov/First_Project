@@ -71,7 +71,7 @@ const placemarks = [
           {t("main.about_us.text_6")}
         </h1>
       </div>
-      <div className="grid grid-cols-[repeat(4,142px)] gap-[20px] bg-[#ededed] backdrop-blur-sm dark:bg-[#222] dark:bg-opacity-50 p-[40px_88px] rounded-[16px] bg-opacity-90 justify-between w-[90%] m-auto">
+      <div className="gap-[20px] bg-[#ededed] flex backdrop-blur-sm dark:bg-[#222] dark:bg-opacity-50 p-[40px_88px] rounded-[16px] bg-opacity-90 justify-between w-[90%] m-auto xl:flex-wrap lg:flex-wrap md:flex-wrap sm:flex-wrap st:flex-wrap">
         <Card_2
           title={t("main.home.card_4.title_1")}
           text={t("main.home.card_4.text_1")}
@@ -90,7 +90,7 @@ const placemarks = [
         />
       </div>
       <YMaps>
-                <Map className='w-[725px] h-[400px]' defaultState={{ center: [38.563838, 68.757106], zoom: 9 }} >
+                <Map className='w-[725px] h-[400px] xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-[90%] st:w-[90%] xl:m-auto lg:m-auto md:m-auto sm:m-auto st:m-auto pt-[100px]' defaultState={{ center: [38.563838, 68.757106], zoom: 9 }} >
                     <ZoomControl options={{ float: 'right' }} />
                     <SearchControl
                         options={{

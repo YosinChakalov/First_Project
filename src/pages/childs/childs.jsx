@@ -30,10 +30,10 @@ const childs = () => {
           <h1 className="font-[400]">{t("main.childs.link_3")}</h1>
         </div>
       </div>
-      <div className="flex flex-wrap w-[90%] m-auto justify-between pt-[100px]">
+      <div className="flex flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap w-[90%] m-auto justify-between pt-[100px]">
         {data?.map((el) => {
           return (
-            <div key={el.id} className="w-[23%] mb-[60px]">
+            <div key={el.id} className="w-[280px] mb-[60px] m-auto">
               <img src={el.img} alt="" className="w-[100%]" />
               <h1>{el.name}</h1>
               <div className="flex justify-between items-center h-[70px]">

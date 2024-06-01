@@ -25,6 +25,16 @@ import logo from "../assets/images/logo.png";
 import Switcher from "../components/switcher/switcher";
 import { useTranslation } from "react-i18next";
 import { Dropdown, Space } from "antd";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
 
 const customTheme = (outerTheme) =>
   createTheme({
@@ -108,6 +118,103 @@ const layout = () => {
   }
 
   const outerTheme = useTheme();
+
+  const [state, setState] = React.useState({
+    left: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{
+        width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+        padding: 1,
+      }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        <Link to={"/about"} style={{ display: "block", paddingBottom: 5 }}>
+          <li className="hover:text-[gray] transition-colors cursor-pointer">
+            {t("header.nav.top.navigations.about_us")}
+          </li>
+        </Link>
+        <Link to={"/delivery"} style={{ display: "block", paddingBottom: 5 }}>
+          {t("header.nav.top.navigations.delivery_and_payment")}
+        </Link>
+        <Link to={"/blog"} style={{ display: "block", paddingBottom: 5 }}>
+          {t("header.nav.top.navigations.blog")}
+        </Link>
+        <Link to={"/optovic"} style={{ display: "block", paddingBottom: 5 }}>
+          {t("header.nav.top.navigations.optovicam")}
+        </Link>
+      </List>
+      <Divider />
+      <List>
+        <Link
+          style={{ display: "block", paddingBottom: 5 }}
+          to={"/catalog/man"}
+        >
+          {t("header.nav.categories.man")}
+        </Link>
+
+        <Link
+          style={{ display: "block", paddingBottom: 5 }}
+          to={"/catalog/childs"}
+        >
+          {t("header.nav.categories.childs")}
+        </Link>
+
+        <Link
+          style={{ display: "block", paddingBottom: 5 }}
+          to={"/catalog/for_home"}
+        >
+          {t("header.nav.categories.for_home")}
+        </Link>
+
+        <Link
+          style={{ display: "block", paddingBottom: 5 }}
+          to={"/catalog/for_beauty_and_health"}
+        >
+          {t("header.nav.categories.for_beauty")}
+        </Link>
+
+        <Link
+          style={{ display: "block", paddingBottom: 5 }}
+          to={"/catalog/discounts"}
+        >
+          {t("header.nav.categories.discounts")}
+        </Link>
+
+        <Link
+          style={{ display: "block", paddingBottom: 5 }}
+          to={"/catalog/likvidation"}
+        >
+          {t("header.nav.categories.likvidation")}
+        </Link>
+        <div className="flex justify-center gap-10 items-center mt-[10px]">
+          <Switcher />
+          <IconButton aria-label="">
+            <StarOutline style={{ color: "black", }} />
+          </IconButton>
+          <IconButton aria-label="">
+            <ShoppingBagOutlined style={{ color: "black", }} />
+          </IconButton>
+        </div>
+      </List>
+    </Box>
+  );
 
   return (
     <>
@@ -210,7 +317,7 @@ const layout = () => {
               <div className="flex gap-10">
                 <h1 className="transition cursor-pointer text-[14px] font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-2 ">
                   <Link to={"/catalog/man"}>
-                       {t("header.nav.categories.man")}
+                    {t("header.nav.categories.man")}
                   </Link>
                 </h1>
                 <h1 className="transition cursor-pointer text-[14px] font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] border-b-2 pb-[19px]">
@@ -256,24 +363,34 @@ const layout = () => {
           </div>
         </section>
       </header>
-      <header className="w-[1519px] m-auto dark:text-[#eeeeee] hidden lg:block md:block sm:block st:block lg:w-[100%] md:w-[100%] sm:w-[100%] st:w-[100%]">
-        <div className="w-[90%] m-auto flex justify-between items-center">
-          <IconButton aria-label="" style={{ marginRight: 35 }}>
-            <Menu style={{ color: "black" }} />
-          </IconButton>
-          <Link to={'/'}>
-          <img src={logo} alt="" className="w-[150px]" />
+      <header className="w-[1519px] m-auto dark:text-[#eeeeee] hidden lg:block md:block sm:block st:block lg:w-[100%] md:w-[100%] sm:w-[100%] st:w-[100%] relative">
+        <div className="w-[100%] m-auto flex justify-between items-center dark:bg-[#333] fixed top-0 z-10 bg-[#eeeeee]">
+          {["left"].map((anchor) => (
+            <React.Fragment key={anchor}>
+              <IconButton
+                aria-label=""
+                style={{ marginRight: 35 }}
+                onClick={toggleDrawer(anchor, true)}
+              >
+                <Menu style={{ color: "black" }} />
+              </IconButton>
+              <Drawer
+                anchor={anchor}
+                open={state[anchor]}
+                onClose={toggleDrawer(anchor, false)}
+              >
+                {list(anchor)}
+              </Drawer>
+            </React.Fragment>
+          ))}
+
+          <Link to={"/"}>
+            <img src={logo} alt="" className="w-[150px]" />
           </Link>
           <div className="flex justify-end gap-1">
-          <IconButton aria-label="">
-                  <StarOutline style={{ color: "black", width: 20 }} />
-                </IconButton>
-                <IconButton aria-label="">
-                  <ShoppingBagOutlined style={{ color: "black", width: 20 }} />
-                </IconButton>
-                <IconButton aria-label="">
-                  <Search style={{ color: "black", width: 20 }} />
-                </IconButton>
+            <IconButton aria-label="">
+              <Search style={{ color: "black", width: 20 }} />
+            </IconButton>
           </div>
         </div>
       </header>
@@ -335,7 +452,7 @@ const layout = () => {
               </Link>
             </ul>
           </div>
-          <div className="">
+          <div className="mb-10">
             <ul className="flex flex-col justify-center gap-2">
               <li className="text-white font-[600] mb-[10px]">
                 {t("footer.third_colm.title")}

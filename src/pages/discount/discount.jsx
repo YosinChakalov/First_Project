@@ -11,7 +11,7 @@ const discount = () => {
   }
 
   return (
-    <section className='bg-[white] pt-[10px] pb-[70px] dark:bg-[#333] dark:text-[#eeeeee] 2xl:w-[100%] xl:w-[90%] lg:w-[90%]  md:w-[90%] sm:w-[90%] st:w-[90%]'>
+    <section className='bg-[white] pt-[10px] pb-[70px] dark:bg-[#333] dark:text-[#eeeeee]'>
      <div className='flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto'>
         <Link to={'/'}>
         <h1>{t('main.discount.path_1')}</h1>

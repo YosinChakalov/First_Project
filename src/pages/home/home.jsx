@@ -75,7 +75,7 @@ const home = () => {
         <h1 className="cursor-pointer dark:text-[#eeeeee] hover:border-b-2 hover:border-black dark:hover:border-white dark:border-[#333] border-[white] border-b-2">{t('main.home.title_1')}</h1>
         <h1 className="cursor-pointer dark:text-[#eeeeee] hover:border-b-2 hover:border-black border-[white] dark:hover:border-white dark:border-[#333] border-b-2">{t('main.home.title_2')}</h1>
         </div>
-        <div className="w-[90%] h-[700px] m-auto flex flex-wrap gap-10 items-center justify-between">
+        <div className="w-[90%] m-auto pb-[50px] flex flex-wrap gap-10 items-center justify-between">
           {data?.map((el) => {
             return (
               <div key={el.id} className="relative">
@@ -99,29 +99,29 @@ const home = () => {
       </div>
       <div className="bg-white dark:bg-[#333] dark:text-[#eeeeee] 2xl:w-[100%] xl:w-[100%] lg:w-[100%]  md:w-[100%] sm:w-[100%] st:w-[100%]">
         <div className="w-[90%]  flex justify-between m-auto flex-wrap 2xl:w-[90%] xl:w-[90%] lg:w-[90%]  md:w-[90%] sm:w-[90%] st:w-[90%] 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap">
-        <div>
+        <div className="pb-[30px]">
           <img src={manInJimper} alt="" className="w-[310px]" />
           <h1 className="text-[18px] font-[500] mt-[10px]">{t('main.home.card_3.name_1')}</h1>
         </div>
-        <div>
+        <div className="pb-[30px]">
           <img src={manInJimper} alt="" className="w-[310px]" />
           <h1 className="text-[18px] font-[500] mt-[10px]">{t('main.home.card_3.name_2')}</h1>
         </div>
-        <div>
+        <div className="pb-[30px]">
           <img src={manInJimper} alt="" className="w-[310px]" />
           <h1 className="text-[18px] font-[500] mt-[10px]">{t('main.home.card_3.name_3')}</h1>
         </div>
-        <div>
+        <div className="pb-[30px]">
           <img src={manInJimper} alt="" className="w-[310px]" />
           <h1 className="text-[18px] font-[500] mt-[10px]">{t('main.home.card_3.name_4')}</h1>
         </div>
         </div>
       </div>
       <div className=" bg-[white] pt-[100px] dark:bg-[#333] dark:text-[#eeeeee]">
-        <div className="flex justify-between w-[90%] m-auto ">
+        <div className="flex justify-between w-[90%] m-auto 2xl:flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap mt-[30px]">
         {data2?.map((el)=> {
           return (
-            <div key={el.id}>
+            <div key={el.id} className="pb-[30px]">
               <img src={el.img} alt="" className="w-[300px]" />
             </div>
           )
