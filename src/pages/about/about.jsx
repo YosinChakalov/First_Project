@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Card_2 from "../../components/card_2/card_2";
 import { YMaps, Map, Placemark, ZoomControl, SearchControl, Clusterer } from "@pbe/react-yandex-maps";
 import locate from "../../assets/images/locate.png";
+import { Link } from "react-router-dom";
 
 const about = () => {
   const { t, i18n } = useTranslation();
@@ -43,10 +44,12 @@ const placemarks = [
 
   return (
     <section className="bg-[white] pt-[10px] pb-[70px] dark:bg-[#333] dark:text-[#eeeeee]">
-      <div className="flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto">
-        <h1>{t("main.about_us.path_1")}</h1>
+      <div className='flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto'>
+        <Link to={'/'}>
+        <h1>{t('main.about_us.path_1')}</h1>
+        </Link>
         <h1>/</h1>
-        <h1>{t("main.about_us.path_2")}</h1>
+        <h1>{t('main.about_us.path_2')}</h1>
       </div>
       <h1 className="text-center text-[28px] font-[700]">
         {t("main.about_us.title")}
@@ -90,7 +93,7 @@ const placemarks = [
         />
       </div>
       <YMaps>
-                <Map className='w-[725px] h-[400px] xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-[90%] st:w-[90%] xl:m-auto lg:m-auto md:m-auto sm:m-auto st:m-auto pt-[100px]' defaultState={{ center: [38.563838, 68.757106], zoom: 9 }} >
+                <Map className='w-[90%] h-[500px] xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-[90%] st:w-[90%] xl:m-auto lg:m-auto md:m-auto sm:m-auto st:m-auto pt-[100px] m-auto' defaultState={{ center: [38.563838, 68.757106], zoom: 9 }} >
                     <ZoomControl options={{ float: 'right' }} />
                     <SearchControl
                         options={{

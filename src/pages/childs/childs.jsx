@@ -2,6 +2,7 @@ import React from "react";
 import { useGetKidsQuery } from "../../api/kidsApi/kidsApi";
 import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const childs = () => {
   const { data, error, isLoading } = useGetKidsQuery();
@@ -14,11 +15,13 @@ const childs = () => {
   console.log(data);
 
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-[#333] dark:text-[#eeeeee]">
       <div className="flex gap-3 font-[400] text-[18px] pt-[15px] text-[#808080] w-[90%] m-auto">
-        <h1>{t("main.childs.path_1")}</h1>
+        <Link to={'/'}>
+        <h1>{t('main.childs.path_1')}</h1>
+        </Link>
         <h1>/</h1>
-        <h1>{t("main.childs.path_2")}</h1>
+        <h1>{t('main.childs.path_2')}</h1>
         <h1>/</h1>
         <h1>{t("main.childs.path_3")}</h1>
       </div>

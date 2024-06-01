@@ -12,8 +12,12 @@ export const todoApi = createApi({
         getUsers: builder.query({
             query: () => "user",
             providesTags:["todos"],
+        }),
+        getBlogs: builder.query({
+            query: () => "blog",
+            providesTags:["todos"],
         })
     }),
 });
 
-export const { useGetTodosQuery, useGetUsersQuery } = todoApi;
+export const { useGetTodosQuery, useGetUsersQuery, useGetBlogsQuery } = todoApi;

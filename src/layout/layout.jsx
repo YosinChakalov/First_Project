@@ -274,7 +274,9 @@ const layout = () => {
                   </h1>
                   <div className="border border-[#999] mx-[10px]"></div>
                   <h1 className="hover:text-[gray] transition-colors cursor-pointer">
+                    <Link to={"/register"}>
                     {t("header.nav.top.navigations.register")}
+                    </Link>
                   </h1>
                 </div>
                 <div className="w-[30%] flex justify-center gap-5">
@@ -365,7 +367,8 @@ const layout = () => {
           </div>
         </section>
       </header>
-      <header className="w-[1519px] m-auto dark:text-[#eeeeee] hidden lg:block md:block sm:block st:block lg:w-[100%] md:w-[100%] sm:w-[100%] st:w-[100%] relative">
+      <header className="w-[1519px] m-auto dark:text-[#eeeeee] hidden lg:block md:block sm:block st:block lg:w-[100%] md:w-[100%] sm:w-[100%] st:w-[100%]">
+        <div className="relative mb-[48px]">
         <div className="w-[100%] m-auto flex justify-between items-center dark:bg-[#333] fixed top-0 z-10 bg-[#eeeeee]">
           {["left"].map((anchor) => (
             <React.Fragment key={anchor}>
@@ -389,11 +392,20 @@ const layout = () => {
           <Link to={"/"}>
             <img src={logo} alt="" className="w-[150px]" />
           </Link>
-          <div className="flex justify-end gap-1">
-            <IconButton aria-label="">
-              <Search style={{ color: "black", width: 20 }} />
-            </IconButton>
-          </div>
+          <div className="flex gap-2 ">
+                  <h1 className="hover:text-[gray] transition-colors text-[12px] cursor-pointer text-wrap ">
+                    <Link to={"/login"}>
+                      {t("header.nav.top.navigations.login")}
+                    </Link>
+                  </h1>
+                  <div className="border border-[#999] mx-[10px]"></div>
+                  <h1 className="hover:text-[gray] transition-colors text-[12px] cursor-pointer">
+                    <Link to={"/register"}>
+                    {t("header.nav.top.navigations.register")}
+                    </Link>
+                  </h1>
+                </div>
+        </div>
         </div>
       </header>
       <main className="w-[1519px] m-auto 2xl:w-[1519px] xl:w-[100%] lg:w-[100%]  md:w-[100%] sm:w-[100%] st:w-[100%]">

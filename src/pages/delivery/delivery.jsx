@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const delivery = () => {
   const { t, i18n } = useTranslation();
@@ -9,10 +10,12 @@ const delivery = () => {
 
   return (
     <section className="bg-[white] pt-[10px] dark:bg-[#333] dark:text-[#eeeeee]">
-      <div className="flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto">
-        <h1>{t("main.delivery.path_1")}</h1>
+      <div className='flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto'>
+        <Link to={'/'}>
+        <h1>{t('main.delivery.path_1')}</h1>
+        </Link>
         <h1>/</h1>
-        <h1>{t("main.delivery.path_2")}</h1>
+        <h1>{t('main.delivery.path_2')}</h1>
       </div>
       <h1 className="text-center text-[28px] font-[700]">
         {t("main.delivery.title")}

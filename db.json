@@ -236,5 +236,67 @@
             "name": "Леггинсы из шерсти мериноса детские",
             "price": "1 625 ₽"
         }
+    ],
+    "blog": [
+        {
+            "id": "1",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "2",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "3",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "4",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "5",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "6",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "7",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "8",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "9",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "10",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "11",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        },
+        {
+            "id": "12",
+            "img": "/src/assets/images/vashing.jpg",
+            "name": "Как стирать шерстяные вещи?"
+        }
     ]
 }

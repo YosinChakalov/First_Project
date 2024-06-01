@@ -20,11 +20,13 @@ const login = () => {
   return (
     <div className='bg-white h-[725px] w-[100%] m-auto '>
       <div>
-        <div className='flex gap-3 font-[400] text-[18px] pt-[15px] text-[#808080] w-[90%] m-auto'>
-          <h1>{t("main.login.path_1")}</h1>
-          <h1>/</h1>
-          <h1>{t("main.login.path_2")}</h1>
-        </div>
+      <div className='flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto'>
+        <Link to={'/'}>
+        <h1>{t('main.login.path_1')}</h1>
+        </Link>
+        <h1>/</h1>
+        <h1>{t('main.login.path_2')}</h1>
+      </div>
         <h1 className='text-[30px] font-[600] text-center h-[150px] flex items-center justify-center'>{t('main.login.title')}</h1>
         <h1 className='text-[gray] w-[90%] m-auto my-[20px]'>{t('main.login.text')}</h1>
       </div>
@@ -55,9 +57,9 @@ const login = () => {
         }
       }}>
         <label htmlFor="" className='text-[18px] font-[300]'>{t('main.login.login')}</label>
-        <input name='email' className='border-2 border-[gray] pl-[10px] block mb-[20px] w-[45%] h-[50px]' />
+        <input name='email' className='border-2 border-[gray] pl-[10px] block mb-[20px] w-[45%] h-[50px] xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-[90%] st:w-[90%]' />
         <label htmlFor="" className='text-[18px] font-[300]'>{t('main.login.password')}</label>
-        <input name='password' className='border-2 border-[gray] pl-[10px] w-[45%] h-[50px] block mb-[10px]'/>
+        <input name='password' className='border-2 border-[gray] pl-[10px] w-[45%] h-[50px] block mb-[10px] xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-[90%] st:w-[90%]'/>
         <div className='mb-[20px]'>
         <Link to={"/register"}>
           <h1 className='text-[18px] inline border-b-2 border-black font-[400] hover:border-white transition-all'>{t('main.login.register')}</h1>

@@ -2,6 +2,7 @@ import React from "react";
 import { useGetMansQuery } from "../../api/mansApi/mansApi";
 import { useTranslation } from "react-i18next";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const man = () => {
   const { data, error, isLoading } = useGetMansQuery();
@@ -17,11 +18,13 @@ const man = () => {
     <section className="bg-white dark:bg-[#333] dark:text-[#eeeeee]">
       <div>
         <div className="flex gap-3 font-[400] text-[18px] pt-[15px] text-[#808080] w-[90%] m-auto">
-          <h1>{t("main.childs.path_1")}</h1>
+        <Link to={'/'}>
+        <h1>{t('main.mans.path_1')}</h1>
+        </Link>
+        <h1>/</h1>
+        <h1>{t('main.mans.path_2')}</h1>
           <h1>/</h1>
-          <h1>{t("main.childs.path_2")}</h1>
-          <h1>/</h1>
-          <h1>{t("main.childs.path_3")}</h1>
+          <h1>{t("main.mans.path_3")}</h1>
         </div>
       </div>
       <div>
