@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useGetKidsQuery } from "../../api/kidsApi/kidsApi";
 import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const childs = () => {
   const { data, error, isLoading } = useGetKidsQuery();
@@ -11,6 +13,10 @@ const childs = () => {
   function TranslateClick(lang) {
     i18n.changeLanguage(lang);
   }
+
+  useEffect(()=> {
+    AOS.init()
+  },[])
 
   console.log(data);
 
@@ -27,13 +33,13 @@ const childs = () => {
       </div>
       <div className="pt-[30px] w-[90%] m-auto">
         <h1 className="text-[23px] text-center font-[700]">{t('main.childs.title')}</h1>
-        <div className="pt-[30px]">
+        <div className="pt-[30px]" data-aos="fade-left">
           <h1 className="font-[700] mb-[7px]" >{t("main.childs.link_1")}</h1>
           <h1 className="font-[400] mb-[7px]">{t("main.childs.link_2")}</h1>
           <h1 className="font-[400]">{t("main.childs.link_3")}</h1>
         </div>
       </div>
-      <div className="flex flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap w-[90%] m-auto justify-between pt-[100px]">
+      <div className="flex flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap w-[90%] m-auto justify-between pt-[100px]" data-aos="fade-up-right">
         {data?.map((el) => {
           return (
             <div key={el.id} className="w-[280px] mb-[60px] m-auto">

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useGetMansQuery } from "../../api/mansApi/mansApi";
 import { useTranslation } from "react-i18next";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const man = () => {
   const { data, error, isLoading } = useGetMansQuery();
@@ -11,6 +13,10 @@ const man = () => {
   function TranslateClick(lang) {
     i18n.changeLanguage(lang);
   }
+
+  useEffect(()=> {
+    AOS.init()
+  },[])
 
   console.log(data);
 
@@ -38,7 +44,7 @@ const man = () => {
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_5')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_6')}</li>
           </ul>
-          <ul className="mb-[20px]">
+          <ul className="mb-[20px]" data-aos='fade-up'>
             <li className="hover:text-[grey] text-[18px] transition pb-[8px] font-[600]">{t('main.mans.link_title_2')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_7')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_8')}</li>
@@ -46,12 +52,12 @@ const man = () => {
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_10')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_11')}</li>
           </ul>
-          <ul className="mb-[20px]">
+          <ul className="mb-[20px]" data-aos='fade-down'>
             <li className="hover:text-[grey] text-[18px] transition pb-[8px] font-[600]">{t('main.mans.link_title_3')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_12')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_13')}</li>
           </ul>
-          <ul className="mb-[20px]">
+          <ul className="mb-[20px]" data-aos='fade-left'>
             <li className="hover:text-[grey] text-[18px] transition pb-[8px] font-[600]">{t('main.mans.link_title_4')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_15')}</li>
             <li className="text-[16px] border-b-1 hover:text-[grey] mb-[7px] transition cursor-pointer font-[500] hover:border-black dark:hover:border-white border-[white] dark:border-[#333] hover:border-b-1 ">{t('main.mans.link_16')}</li>
@@ -60,7 +66,7 @@ const man = () => {
           </ul>
         </div>
       </div>
-      <div className="flex w-[90%] m-auto justify-between flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap pt-[100px]">
+      <div className="flex w-[90%] m-auto justify-between flex-wrap xl:flex-wrap lg:flex-wrap  md:flex-wrap sm:flex-wrap st:flex-wrap pt-[100px]" data-aos="fade-down-right">
         {data?.map((el) => {
           return (
             <div key={el.id} className="w-[280px] mb-[60px] m-auto">

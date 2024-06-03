@@ -16,9 +16,10 @@ const login = () => {
   function TranslateClick(lang) {
     i18n.changeLanguage(lang);
   }
+  
 
   return (
-    <div className='bg-white h-[725px] w-[100%] m-auto '>
+    <div className='bg-white h-[725px] w-[100%] m-auto dark:bg-[#333] dark:text-[#eeeeee]'>
       <div>
       <div className='flex gap-3 font-[400] text-[18px] text-[#808080] w-[90%] m-auto'>
         <Link to={'/'}>

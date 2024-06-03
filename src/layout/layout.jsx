@@ -8,7 +8,7 @@ import {
   outlinedInputClasses,
   useTheme,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import {
@@ -35,6 +35,16 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareWhatsapp, faTelegram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faPhone, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-regular-svg-icons"
+
+
 
 const customTheme = (outerTheme) =>
   createTheme({
@@ -71,45 +81,6 @@ const customTheme = (outerTheme) =>
       },
     },
   });
-
-const items = [
-  {
-    key: "1",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.antgroup.com"
-      >
-        1st menu item
-      </a>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.aliyun.com"
-      >
-        2nd menu item
-      </a>
-    ),
-  },
-  {
-    key: "3",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.luohanacademy.com"
-      >
-        3rd menu item
-      </a>
-    ),
-  },
-];
 
 const layout = () => {
   const { t, i18n } = useTranslation();
@@ -216,6 +187,15 @@ const layout = () => {
     </Box>
   );
 
+  let user = JSON.parse(localStorage.getItem("user")) || [];
+
+  const [age, setAge] = useState("");
+
+  const handleChange = (e) => {
+    TranslateClick(e.target.value),
+    setAge(e.target.value)
+  };
+
   return (
     <>
       <header className="w-[1519px] m-auto dark:text-[#eeeeee] 2xl:w-[100%] xl:w-[100%] lg:hidden md:hidden sm:hidden st:hidden">
@@ -225,7 +205,7 @@ const layout = () => {
               {t("header.nav.top.top_text")}
             </h6>
           </div>
-          <div className="w-[100%] bg-[#f5f5f5] dark:bg-[#222] h-[40px] flex items-center justify-between font-sans hover:bg-red">
+          <div className="w-[100%] bg-[#f5f5f5] dark:bg-[#222] h-[60px] flex items-center justify-between font-sans hover:bg-red">
             <div className="w-[85%] flex items-center justify-between m-auto ">
               <div>
                 <ul className="flex gap-10 text-[#222] dark:text-[#eeeeee] items-center">
@@ -254,14 +234,14 @@ const layout = () => {
               <div className="flex items-center gap-7 ">
                 <div className="flex gap-3">
                   <IconButton aria-label="">
-                    <TelegramIcon style={{ color: "black" }} />
+                  <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faTelegram}/>
                   </IconButton>
                   <IconButton aria-label="">
-                    <WhatsApp style={{ color: "black" }} />
+                  <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faWhatsapp}/>
                   </IconButton>
                 </div>
                 <div className="w-[250px]">
-                  <Phone style={{ color: "black" }} />
+                <FontAwesomeIcon className="text-[20px] text-black dark:text-white w-[18px]" icon={faPhone}/>
                   <span className="hover:text-[gray] transition-colors cursor-pointer">
                     +7 (916) 800-13-16
                   </span>
@@ -275,27 +255,27 @@ const layout = () => {
                   <div className="border border-[#999] mx-[10px]"></div>
                   <h1 className="hover:text-[gray] transition-colors cursor-pointer">
                     <Link to={"/register"}>
-                    {t("header.nav.top.navigations.register")}
+                      {t("header.nav.top.navigations.register")}
                     </Link>
                   </h1>
                 </div>
                 <div className="w-[30%] flex justify-center gap-5">
-                  <select
-                    name=""
-                    id=""
-                    onChange={(e) => TranslateClick(e.target.value)}
-                    className="bg-transparent"
-                  >
-                    <option value="ru" className="dark:bg-[#222]">
-                      RU
-                    </option>
-                    <option value="en" className="dark:bg-[#222]">
-                      EN
-                    </option>
-                    <option value="tj" className="dark:bg-[#222]">
-                      TJ
-                    </option>
-                  </select>
+                  <Box sx={{ width: 140 }}>
+                    <FormControl fullWidth className='select' size="small" >
+                      <InputLabel id="demo-simple-select-label">Language</InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={age}
+                        label="Language"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={'ru'}>Русский </MenuItem>
+                        <MenuItem value={'en'}>English</MenuItem>
+                        <MenuItem value={'tj'}>Таджикский</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Box>
                   <Switcher />
                 </div>
               </div>
@@ -310,10 +290,10 @@ const layout = () => {
               </Link>
               <div className="w-[35%] flex justify-end gap-5">
                 <IconButton aria-label="">
-                  <StarOutline style={{ color: "black" }} />
+                <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faStar}/>
                 </IconButton>
                 <IconButton aria-label="" style={{ marginRight: 35 }}>
-                  <ShoppingBagOutlined style={{ color: "black" }} />
+                <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faShoppingBag}/>
                 </IconButton>
               </div>
             </div>
@@ -369,43 +349,60 @@ const layout = () => {
       </header>
       <header className="w-[1519px] m-auto dark:text-[#eeeeee] hidden lg:block md:block sm:block st:block lg:w-[100%] md:w-[100%] sm:w-[100%] st:w-[100%]">
         <div className="relative mb-[48px]">
-        <div className="w-[100%] m-auto flex justify-between items-center dark:bg-[#333] fixed top-0 z-10 bg-[#eeeeee]">
-          {["left"].map((anchor) => (
-            <React.Fragment key={anchor}>
-              <IconButton
-                aria-label=""
-                style={{ marginRight: 35 }}
-                onClick={toggleDrawer(anchor, true)}
-              >
-                <Menu style={{ color: "black" }} />
-              </IconButton>
-              <Drawer
-                anchor={anchor}
-                open={state[anchor]}
-                onClose={toggleDrawer(anchor, false)}
-              >
-                {list(anchor)}
-              </Drawer>
-            </React.Fragment>
-          ))}
+          <div className="w-[100%] m-auto flex justify-between items-center dark:bg-[#333] fixed top-0 z-10 bg-[#eeeeee]">
+            {["left"].map((anchor) => (
+              <React.Fragment key={anchor}>
+                <IconButton
+                  aria-label=""
+                  style={{ marginRight: 35 }}
+                  onClick={toggleDrawer(anchor, true)}
+                >
+                  <Menu style={{ color: "black" }} />
+                </IconButton>
+                <Drawer
+                  anchor={anchor}
+                  open={state[anchor]}
+                  onClose={toggleDrawer(anchor, false)}
+                >
+                  {list(anchor)}
+                </Drawer>
+              </React.Fragment>
+            ))}
 
-          <Link to={"/"}>
-            <img src={logo} alt="" className="w-[150px]" />
-          </Link>
-          <div className="flex gap-2 ">
-                  <h1 className="hover:text-[gray] transition-colors text-[12px] cursor-pointer text-wrap ">
-                    <Link to={"/login"}>
-                      {t("header.nav.top.navigations.login")}
-                    </Link>
-                  </h1>
-                  <div className="border border-[#999] mx-[10px]"></div>
-                  <h1 className="hover:text-[gray] transition-colors text-[12px] cursor-pointer">
-                    <Link to={"/register"}>
-                    {t("header.nav.top.navigations.register")}
-                    </Link>
-                  </h1>
-                </div>
-        </div>
+            <Link to={"/"}>
+              <img src={logo} alt="" className="w-[150px]" />
+            </Link>
+            {localStorage.getItem("user") ? (
+              <div className="flex items-center mr-[30px]">
+                <h1 className="dark:text-[white] text-[14px] tracking-[0.46px] font-[Montserrat-medium] text-[#192734] mr-[40px] cursor-pointer">
+                  {user.name}
+                </h1>
+              </div>
+            ) : (
+              <div>
+                <button
+                  className="mr-[20px] border-2 border-[#fff] rounded-[4px] p-[0_16px] h-[40px] text-[#0f172a] font-[Montserrat-medium] text-[14px] hover:bg-[white] hover:duration-[0.50s] hover:text-[#0f172a] dark:text-[white] dark:hover:text-[#0f172a] shadow"
+                  onClick={() => {
+                    {
+                      handleOpenLogin();
+                    }
+                  }}
+                >
+                  {t("header.button1")}
+                </button>
+                <button
+                  className="bg-[#e00707] hover:bg-[rgb(255,67,67)] p-[0_16px] h-[40px] rounded-[4px] text-[white] font-[Montserrat-medium] mr-[20px] text-[14px] hover:duration-[0.30s]"
+                  onClick={() => {
+                    {
+                      handleOpen();
+                    }
+                  }}
+                >
+                  {t("header.button2")}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </header>
       <main className="w-[1519px] m-auto 2xl:w-[1519px] xl:w-[100%] lg:w-[100%]  md:w-[100%] sm:w-[100%] st:w-[100%]">

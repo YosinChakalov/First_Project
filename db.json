@@ -298,5 +298,55 @@
             "img": "/src/assets/images/vashing.jpg",
             "name": "Как стирать шерстяные вещи?"
         }
+    ],
+    "forHome": [
+        {
+            "id": "1",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        },
+        {
+            "id": "2",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        },
+        {
+            "id": "3",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        },
+        {
+            "id": "4",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        },
+        {
+            "id": "5",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        },
+        {
+            "id": "6",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        },
+        {
+            "id": "7",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        },
+        {
+            "id": "8",
+            "img": "/src/assets/images/PLED.jpg",
+            "name": "Как стирать шерстяные вещи?",
+            "price": "880 ₽"
+        }
     ]
 }
