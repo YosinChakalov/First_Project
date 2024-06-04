@@ -12,13 +12,10 @@ import medal from "/src/assets/images/medal.png";
 import Card_1 from "../../components/card_1/card_1";
 import { useTranslation } from "react-i18next";
 import { useGetTodosQuery } from "../../api/todoApi/todoApi";
-import { StarBorderOutlined } from "@mui/icons-material";
+import { ShoppingBag } from "@mui/icons-material";
 import { Button, IconButton } from "@mui/material";
 import manInJimper from "../../assets/images/manInjimper.jpg";
-import cat from "../../assets/images/cat.jpg";
 import { useGetReviewsQuery } from "../../api/reviewsApi/reviewsApi";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -117,7 +114,7 @@ const home = () => {
                   />
                   <div className="absolute top-[10px] left-[245px] z-[5] ">
                     <IconButton aria-label="">
-                      <StarBorderOutlined style={{ color: "black" }} />
+                      <ShoppingBag style={{ color: "black" }} />
                     </IconButton>
                   </div>
                 </div>

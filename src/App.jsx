@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   About,
   Blog,
+  Cart,
   Catalog,
   Childs,
   Delivery,
@@ -77,6 +78,14 @@ function App() {
           element: (
             <Suspense fallback={<div className="loader"></div>}>
               <Childs />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/cart",
+          element: (
+            <Suspense fallback={<div className="loader"></div>}>
+              <Cart />
             </Suspense>
           ),
         },

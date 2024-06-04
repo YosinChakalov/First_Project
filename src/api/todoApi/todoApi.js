@@ -20,8 +20,16 @@ export const todoApi = createApi({
         getForHome: builder.query({
             query: () => "forHome",
             providesTags:["todos"],
+        }),
+        getForBeauty: builder.query({
+            query: () => "forBeautyAndHealth",
+            providesTags:["todos"],
+        }),
+        getLicvidation: builder.query({
+            query: () => "licvidation",
+            providesTags:["todos"],
         })
     }),
 });
 
-export const { useGetTodosQuery, useGetUsersQuery, useGetBlogsQuery, useGetForHomeQuery } = todoApi;
+export const { useGetTodosQuery, useGetUsersQuery, useGetBlogsQuery, useGetForHomeQuery, useGetForBeautyQuery, useGetLicvidationQuery } = todoApi;

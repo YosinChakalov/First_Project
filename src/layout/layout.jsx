@@ -1,7 +1,5 @@
 import {
-  Button,
   IconButton,
-  Input,
   TextField,
   ThemeProvider,
   createTheme,
@@ -10,41 +8,29 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import {
-  ArrowForward,
-  Menu,
-  Phone,
-  Search,
-  Shop,
-  ShoppingBagOutlined,
-  StarOutline,
-  WhatsApp,
-} from "@mui/icons-material";
+import { Menu, ShoppingBagOutlined, StarOutline } from "@mui/icons-material";
 import logo from "../assets/images/logo.png";
 import Switcher from "../components/switcher/switcher";
 import { useTranslation } from "react-i18next";
-import { Dropdown, Space } from "antd";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquareWhatsapp, faTelegram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
-import { faStar } from "@fortawesome/free-regular-svg-icons"
-
-
+import { faTelegram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faArrowRightFromBracket,
+  faCircleUser,
+  faPhone,
+  faShoppingBag,
+} from "@fortawesome/free-solid-svg-icons";
+import rusIcon from "../assets/icons/flag.png";
+import USAIcon from "../assets/icons/flag_2.png";
+import TajIcon from "../assets/icons/flag_3.png";
 
 const customTheme = (outerTheme) =>
   createTheme({
@@ -176,11 +162,28 @@ const layout = () => {
         </Link>
         <div className="flex justify-center gap-10 items-center mt-[10px]">
           <Switcher />
+          <Box sx={{ width: 80 }}>
+            <FormControl fullWidth className="select" size="small">
+              <InputLabel id="demo-simple-select-label">
+                {t("main.language")}
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={age}
+                label="Language"
+                onChange={handleChange}
+              >
+                <MenuItem value={"ru"}>Русский</MenuItem>
+                <MenuItem value={"en"}>English</MenuItem>
+                <MenuItem value={"tj"}>Таджикский</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
           <IconButton aria-label="">
-            <StarOutline style={{ color: "black" }} />
-          </IconButton>
-          <IconButton aria-label="">
-            <ShoppingBagOutlined style={{ color: "black" }} />
+            <Link to={"/cart"}>
+              <ShoppingBagOutlined style={{ color: "black" }} />
+            </Link>
           </IconButton>
         </div>
       </List>
@@ -192,8 +195,7 @@ const layout = () => {
   const [age, setAge] = useState("");
 
   const handleChange = (e) => {
-    TranslateClick(e.target.value),
-    setAge(e.target.value)
+    TranslateClick(e.target.value), setAge(e.target.value);
   };
 
   return (
@@ -234,35 +236,67 @@ const layout = () => {
               <div className="flex items-center gap-7 ">
                 <div className="flex gap-3">
                   <IconButton aria-label="">
-                  <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faTelegram}/>
+                    <FontAwesomeIcon
+                      className="text-[20px] text-black dark:text-white "
+                      icon={faTelegram}
+                    />
                   </IconButton>
                   <IconButton aria-label="">
-                  <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faWhatsapp}/>
+                    <FontAwesomeIcon
+                      className="text-[20px] text-black dark:text-white "
+                      icon={faWhatsapp}
+                    />
                   </IconButton>
                 </div>
                 <div className="w-[250px]">
-                <FontAwesomeIcon className="text-[20px] text-black dark:text-white w-[18px]" icon={faPhone}/>
+                  <FontAwesomeIcon
+                    className="text-[20px] text-black dark:text-white w-[18px]"
+                    icon={faPhone}
+                  />
                   <span className="hover:text-[gray] transition-colors cursor-pointer">
                     +7 (916) 800-13-16
                   </span>
                 </div>
-                <div className="flex gap-3 ">
-                  <h1 className="hover:text-[gray] transition-colors cursor-pointer text-wrap ">
-                    <Link to={"/login"}>
-                      {t("header.nav.top.navigations.login")}
-                    </Link>
-                  </h1>
-                  <div className="border border-[#999] mx-[10px]"></div>
-                  <h1 className="hover:text-[gray] transition-colors cursor-pointer">
-                    <Link to={"/register"}>
-                      {t("header.nav.top.navigations.register")}
-                    </Link>
-                  </h1>
-                </div>
+                {localStorage.getItem("user") ? (
+                  <div className="flex items-center mr-[30px]">
+                    <FontAwesomeIcon
+                      className="text-[25px] dark:text-[white] mr-[10px] text-[#192734]"
+                      icon={faCircleUser}
+                    />
+                    <h1 className="dark:text-[white] text-[14px] tracking-[0.46px] font-[Montserrat-medium] text-[#192734] mr-[40px] cursor-pointer">
+                      {user.name}
+                    </h1>
+                    <FontAwesomeIcon
+                      className="text-[20px] dark:text-[white] text-[#192734] cursor-pointer"
+                      onClick={() => {
+                        localStorage.removeItem("user"), setUpdate();
+                      }}
+                      icon={faArrowRightFromBracket}
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <div className="flex gap-3 ">
+                      <h1 className="hover:text-[gray] transition-colors cursor-pointer text-wrap ">
+                        <Link to={"/login"}>
+                          {t("header.nav.top.navigations.login")}
+                        </Link>
+                      </h1>
+                      <div className="border border-[#999] mx-[10px]"></div>
+                      <h1 className="hover:text-[gray] transition-colors cursor-pointer">
+                        <Link to={"/register"}>
+                          {t("header.nav.top.navigations.register")}
+                        </Link>
+                      </h1>
+                    </div>
+                  </div>
+                )}
                 <div className="w-[30%] flex justify-center gap-5">
-                  <Box sx={{ width: 140 }}>
-                    <FormControl fullWidth className='select' size="small" >
-                      <InputLabel id="demo-simple-select-label">Language</InputLabel>
+                  <Box sx={{ width: 170 }}>
+                    <FormControl fullWidth className="select" size="small">
+                      <InputLabel id="demo-simple-select-label">
+                        {t("main.language")}
+                      </InputLabel>
                       <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
@@ -270,9 +304,24 @@ const layout = () => {
                         label="Language"
                         onChange={handleChange}
                       >
-                        <MenuItem value={'ru'}>Русский </MenuItem>
-                        <MenuItem value={'en'}>English</MenuItem>
-                        <MenuItem value={'tj'}>Таджикский</MenuItem>
+                        <MenuItem value={"ru"}>
+                          <div className="flex gap-[45px] items-center">
+                            Русский
+                            <img src={rusIcon} alt="" />
+                          </div>
+                        </MenuItem>
+                        <MenuItem value={"en"}>
+                          <div className="flex gap-[52px] items-center">
+                            English
+                            <img src={USAIcon} alt="" />
+                          </div>
+                        </MenuItem>
+                        <MenuItem value={"tj"}>
+                          <div className="flex gap-[18px] items-center">
+                            Таджикский
+                            <img src={TajIcon} alt="" />
+                          </div>
+                        </MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -289,11 +338,13 @@ const layout = () => {
                 <img src={logo} alt="" className="w-[400px]" />
               </Link>
               <div className="w-[35%] flex justify-end gap-5">
-                <IconButton aria-label="">
-                <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faStar}/>
-                </IconButton>
-                <IconButton aria-label="" style={{ marginRight: 35 }}>
-                <FontAwesomeIcon className="text-[20px] text-black dark:text-white " icon={faShoppingBag}/>
+                <IconButton aria-label="" style={{ marginRight: 35, width: 50 }}>
+                  <Link to={"/cart"}>
+                    <FontAwesomeIcon
+                      className="text-[20px] text-black dark:text-white "
+                      icon={faShoppingBag}
+                    />
+                  </Link>
                 </IconButton>
               </div>
             </div>
@@ -373,33 +424,37 @@ const layout = () => {
               <img src={logo} alt="" className="w-[150px]" />
             </Link>
             {localStorage.getItem("user") ? (
-              <div className="flex items-center mr-[30px]">
+              <div className="flex items-center mr-[20px]">
+                <FontAwesomeIcon
+                  className="text-[25px] dark:text-[white] mr-[10px] text-[#192734]"
+                  icon={faCircleUser}
+                />
                 <h1 className="dark:text-[white] text-[14px] tracking-[0.46px] font-[Montserrat-medium] text-[#192734] mr-[40px] cursor-pointer">
                   {user.name}
                 </h1>
+                <FontAwesomeIcon
+                  className="text-[20px] dark:text-[white] text-[#192734] cursor-pointer"
+                  onClick={() => {
+                    localStorage.removeItem("user"), setUpdate();
+                  }}
+                  icon={faArrowRightFromBracket}
+                />
               </div>
             ) : (
               <div>
-                <button
-                  className="mr-[20px] border-2 border-[#fff] rounded-[4px] p-[0_16px] h-[40px] text-[#0f172a] font-[Montserrat-medium] text-[14px] hover:bg-[white] hover:duration-[0.50s] hover:text-[#0f172a] dark:text-[white] dark:hover:text-[#0f172a] shadow"
-                  onClick={() => {
-                    {
-                      handleOpenLogin();
-                    }
-                  }}
-                >
-                  {t("header.button1")}
-                </button>
-                <button
-                  className="bg-[#e00707] hover:bg-[rgb(255,67,67)] p-[0_16px] h-[40px] rounded-[4px] text-[white] font-[Montserrat-medium] mr-[20px] text-[14px] hover:duration-[0.30s]"
-                  onClick={() => {
-                    {
-                      handleOpen();
-                    }
-                  }}
-                >
-                  {t("header.button2")}
-                </button>
+                <div className="flex gap-3 mr-[30px]">
+                  <h1 className="hover:text-[gray] transition-colors cursor-pointer text-wrap ">
+                    <Link to={"/login"}>
+                      {t("header.nav.top.navigations.login")}
+                    </Link>
+                  </h1>
+                  <div className="border border-[#999] mx-[10px]"></div>
+                  <h1 className="hover:text-[gray] transition-colors cursor-pointer">
+                    <Link to={"/register"}>
+                      {t("header.nav.top.navigations.register")}
+                    </Link>
+                  </h1>
+                </div>
               </div>
             )}
           </div>

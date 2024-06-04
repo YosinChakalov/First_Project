@@ -8,7 +8,7 @@
                     "delivery_and_payment": "Shipping and payment",
                     "blog": "Blog",
                     "optovicam": "Wholesalers",
-                    "login": "Log in",
+                    "login": "Login",
                     "register": "Registration"
                 }
             },
@@ -206,7 +206,18 @@
             "path_1": "Home",
             "path_2": "Useful articles",
             "title": "Useful articles"
-        }
+        },
+        "forHome": {
+            "path_1": "Home",
+            "path_2": "Catalog",
+            "path_3": "For Home",
+            "title": "FOR HOME",
+            "link_1": "Plaids, bedspreads",
+            "link_2": "Blankets",
+            "link_3": "Pillows",
+            "link_4": "Mattress pads"
+          },
+          "language": "Language"
     },
     "footer": {
         "first_colm": {
